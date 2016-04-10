@@ -1,0 +1,1 @@
+# yccypuuck.github.io
