@@ -1,0 +1,39 @@
+<p>This article will be about console profile manager in WAS</p>
+
+<p>Run manageprofiles <code class="highlighter-rouge">-help</code> or visit <a href="http://www14.software.ibm.com/webapp/wsbroker/redirect?version=pix&amp;product=was-nd-dist&amp;topic=rxml_manageprofiles">Information Center</a></p>
+
+<ol>
+  <li>To list number of profiles, execute command</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-linux" data-lang="linux">manageProfiles -listProfiles
+C:\IBM\WebSphere\AppServer\bin&gt;manageProfiles -listProfiles</code></pre></figure>
+
+<ol>
+  <li>To delete all the existing profiles, execute</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-linux" data-lang="linux">C:\IBM\WebSphere\AppServer\bin&gt;manageProfiles.bat -deleteAll
+INSTCONFSUCCESS: Success: All profiles are deleted.</code></pre></figure>
+
+<p>Once profile is deleted, remove left directories manually. To delete directories recursively in windows use command :</p>
+
+<figure class="highlight"><pre><code class="language-linux" data-lang="linux">rmdir /s /q </code></pre></figure>
+
+<ol>
+  <li>Create new prfoiles including deployment managerNow this could be interesting which directory could be recommended, many user creates profiles under path WebSphere\AppServer\profiles\, now this works without issue in unix flavor but in case if 32 bit Windows there is limitation of 255 characters in path. So many people prefer to create profiles like :\IBM\Profiles\</li>
+</ol>
+
+<p>Command to create new profile :
+Syntax : 
+manageProfiles -create -profileName -profilePath -templatePath -nodeName -cellName -hostname -serverName -startingPort 10000 -winserviceCheck 
+eg : 
+C:\IBM\WebSphere\AppServer\bin&gt;manageProfiles -create -profileName AppSrv01 -profilePath C:\IBM\profiles\AppSrv01 -nodeName AppSrv01Node -cellName AppSrv01Cell -hostname localhost -serverName server -startingPort 10000 -winserviceCheck false
+gives output as
+INSTCONFSUCCESS: Success: Profile AppSrv01 now exists. Please consult C:\IBM\profiles\AppSrv01\logs\AboutThisProfile.txt for more information about this profile.</p>
+
+<ol>
+  <li>to check the ports assigned and other details for new profiles check the file at
+\logs\AboutThisProfile.txt
+C:\IBM\WebSphere\AppServer\bin&gt;type \IBM\profiles\AppSrv01\logs\AboutThisProfile.txt</li>
+</ol>
