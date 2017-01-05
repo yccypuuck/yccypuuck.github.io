@@ -3,6 +3,13 @@ layout: post
 title:  "Starting with Jekyll"
 date:   2016-03-10 17:42:07 +0200
 categories: markdown
+header-includes:
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhead[CO,CE]{This is fancy header}
+- \fancyfoot[CO,CE]{And this is a fancy footer}
+- \fancyfoot[LE,RO]{\thepage}
+output: pdf_document
 ---
 
 I've learned about [Jekyll](https://jekyllrb.com/) from [Yegor's post](http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html)
