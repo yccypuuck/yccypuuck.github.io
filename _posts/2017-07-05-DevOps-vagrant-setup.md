@@ -89,4 +89,6 @@ EOC
 ## Add-ons
 
 ### python if doesn’t exist
-```config.vm.provision "shell", inline: "test -e /usr/bin/python || (sudo apt -y update && sudo apt install -y python-minimal)"````
+```ruby
+config.vm.provision "shell", inline: "test -e /usr/bin/python || (sudo apt -y update && sudo apt install -y python-minimal)"
+```
