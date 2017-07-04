@@ -48,15 +48,17 @@ Other useful commands are ```halt```, ```suspend```, ```destroy``` etc.
 ## Network
 ```ruby
 # map guest 8000 to host 12003
- config.vm.network "forwarded_port", guest: 8000, host: 12003, protocol: "tcp"
- config.vm.network "private_network", ip: "192.168.50.4"
+  config.vm.network "forwarded_port", guest: 8000, host: 12003, protocol: "tcp"
+  config.vm.network "private_network", ip: "192.168.50.4"
 ```
 
 ## Proxy
 
 ### install
 
-```vagrant plugin install vagrant-proxyconf```
+```shell
+vagrant plugin install vagrant-proxyconf
+```
 
 ### setup
 ```ruby
