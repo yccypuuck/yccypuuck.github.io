@@ -7,13 +7,19 @@ categories: devops,development,vagrant
 
 # Install MacOS
 Vagrant uses [Virtualbox](https://www.virtualbox.org/) to manage the virtual dependencies. You can [directly download virtualbox](https://www.virtualbox.org/wiki/Downloads) and install or use homebrew for it.
-```$ brew cask install virtualbox```
+```shell
+$ brew cask install virtualbox
+```
 
 Now install Vagrant either from the [website](http://www.vagrantup.com/downloads.html) or use homebrew for installing it.
-```$ brew cask install vagrant```
+```shell
+$ brew cask install vagrant
+```
 
 [Vagrant-Manager](http://vagrantmanager.com/) helps you manage all your virtual machines in one place directly from the menubar.
-```$ brew cask install vagrant-manager```
+```shell
+$ brew cask install vagrant-manager
+```
 
 # Usage
 Add the Vagrant box you want to use. We'll use Ubuntu 12.04 for the following example.
@@ -21,17 +27,21 @@ $ vagrant box add precise64 http://files.vagrantup.com/precise64.box
 You can find more boxes at [Vagrant Cloud](https://vagrantcloud.com/)
 
 Now create a test directory and cd into the test directory. Then we'll initialize the vagrant machine.
-```$ vagrant init precise64```
+```shell
+$ vagrant init precise64
+```
 
 Now lets start the machine using the following command.
-```$ vagrant up```
+```shell
+$ vagrant up
+```
 
 You can ssh into the machine now.
-```$ vagrant ssh```
+```shell
+$ vagrant ssh
+```
 
-Halt the vagrant machine now.
-```$ vagrant halt```
-Other useful commands are ```suspend```, ```destroy``` etc.
+Other useful commands are ```halt```, ```suspend```, ```destroy``` etc.
 
 # VagrantFile
 
