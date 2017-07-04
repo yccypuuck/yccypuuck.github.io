@@ -1,4 +1,4 @@
 ## Overview
 
 ## Location
-[yccypuuck.github.io]
+http://yccypuuck.github.io
