@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lua:Theory loops and iterators (rus)"
-date:   2017-07-04 14:20:07 +0100
+date:   2017-07-03 14:20:07 +0100
 categories: lua,programming,theory,rus
 ---
 
