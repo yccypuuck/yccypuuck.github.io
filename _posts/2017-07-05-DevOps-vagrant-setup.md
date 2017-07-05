@@ -75,8 +75,8 @@ vagrant plugin install vagrant-proxyconf
 
 ### setup keys in the environment
 ```ruby
-config.ssh.private_key_path = ["/Users/ryzhkovm/.ssh/vagrant", "~/.vagrant.d/insecure_private_key"]
-config.vm.provision "file", source: "/Users/ryzhkovm/.ssh/vagrant.pub", destination: "~/.ssh/authorized_keys"
+config.ssh.private_key_path = ["/Users/<you>/.ssh/vagrant", "~/.vagrant.d/insecure_private_key"]
+config.vm.provision "file", source: "/Users/<you>/.ssh/vagrant.pub", destination: "~/.ssh/authorized_keys"
 ```
 ### add to root user and restart SSH
 ```ruby
